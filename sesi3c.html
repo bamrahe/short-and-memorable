@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>brownies</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 1rem;
+            font-family: Arial, Helvetica, Comic sans-serif;
+            background: linear-gradient(to bottom, brown, black);
+        }
+
+        img {
+            width: 500px;
+            display: block;
+            margin: 0 auto 5rem;
+            border-radius: 20px;
+            transition: transform 0.2s;
+        }
+
+        img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.9);
+        }
+
+        .procedure {
+            max-width: 500pt;
+            margin: 0 auto;
+            background: wheat;
+            padding: 20px;
+            border-radius: 20px;
+        }
+
+        .procedure p {
+            color: rgb(99, 36, 36);
+            margin: 0 0 1rem;
+            /* word-break:break-word */
+        }
+
+        .row {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .ingredients,
+        .steps {
+            background: rgb(196, 177, 134);
+            border: 3px solid rgb(42, 22, 22);
+            border-radius: 25px;
+            padding: 1rem;
+            box-sizing: border-box;
+            min-width: 0;
+            word-break: break-word;
+
+        }
+
+        .ingredients {
+            flex: 1 1 30%;
+        }
+
+        .steps {
+            flex: 2 1 50%;
+        }
+
+        /* .ingredients{
+            float: left;
+            background-color: rgb(196, 177, 134);
+            text-align: left;
+            padding: 20px;
+            margin: 30px auto;
+            border-radius: 50px;
+            box-shadow: 0 20px 30px rgba(red, green, blue, alpha);
+            width: 40%;
+        }
+        .steps{
+            float: right;
+            background-color: rgb(244, 185, 123);
+            text-align: left;
+            padding: 20px;
+            margin: 30px auto;
+            border-radius: 50px;
+            box-shadow: 0 20px 30px rgba(red, green, blue, alpha);
+            width: 45%;
+        }
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        */
+        h1 {
+            color: rgb(247, 244, 242);
+            text-align: center;
+        }
+
+        h2 {
+            color: rgb(1, 27, 1);
+        }
+
+        h4 {
+            color: rgb(1, 27, 1);
+        }
+
+        p {
+            color: rgb(1, 27, 1);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>FUDGE BROWNIES</h1>
+    <img class="center" width="100px" src=brownies.jpeg>
+
+    <div class="procedure">
+        <p>These quick and easy homemade brownies! Made with simple ingredients from my Mom kitchen</p>
+
+        <div class="row">
+            <div class="ingredients">
+                <h3>INGREDIENTS</h3>
+                <h4>Ingredient A</h4>
+                <ul>
+                    <li>230 gr dark compound coklat</li>
+                    <li>85 gr unsalted butter</li>
+                </ul>
+                <h4>Ingredient B</h4>
+                <ul>
+                    <li>85 gr all purpose flour</li>
+                    <li>2 tsp cocoa powder</li>
+                    <li>1/2 tsp baking powder</li>
+                    <li>1/2 tsp salt</li>
+                    <li>20 gr choco chips</li>
+                </ul>
+                <h4>Ingredient C</h4>
+                <ul>
+                    <li>1/2 cup sugar</li>
+                    <li>2 large egg</li>
+                    <li>1 T coffee</li>
+                    <li>1 T Vanila</li>
+                </ul>
+            </div>
+
+            <div class="steps">
+                <h3>STEPS : </h3>
+                <ol>
+                    <li>Melted ingredients A.</li>
+                    <li>Beat ingredient C until the sugar dissolves.</li>
+                    <li>Add ingredient A to C. Mixed well.</li>
+                    <li>Add ingredient B to C until well combined.</li>
+                    <li>Bake for 40 minutes at 175 degrees Celsius.</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

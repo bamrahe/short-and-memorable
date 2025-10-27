@@ -1,0 +1,159 @@
+/* RESET HTML DAN BODY */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: teal;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background:rgba(10, 200, 67, 0.53);
+    backdrop-filter: blur(5px);
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    /* flex-direction: row-reverse; */
+    align-items: center;
+    padding: 0 5%;
+    z-index: 999;
+}
+
+.logo {
+    text-decoration: none;
+    font-weight: 750;
+    font-size: 2rem;
+    color: darkgoldenrod;
+    letter-spacing: 1.5px;
+}
+
+.nav-items {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-items a {
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    font-weight: 100;
+    position: relative;
+    transition: color 0.3 ease;
+}
+
+.nav-items a:hover {
+    color: red;
+}
+
+/* STYLE DROP DOWN */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgba(176, 187, 20, 0.6);
+    flex-direction: column;
+    display: none;
+    padding: 0.5rem;
+    min-width: 100px;
+    border-radius: 3px;
+}
+
+.dropdown-menu li {
+    list-style: none;
+}
+
+.dropdown-menu a {
+    padding: 0.5rem 1 rem;
+    display: block;
+}
+
+.dropdown:hover .dropdown-menu{
+    display: flex;
+}
+
+.tower {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    text-align: center;
+}
+
+.tower:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #0000004d;
+}
+
+.home {
+    background-image: url("ToQU_Portal.webp");
+}
+
+.about {
+    background-color: aquamarine;
+}
+
+.toqu {
+    background-image: url("ToQU.webp");
+}
+
+.toid {
+    background-image: url("ToID.webp");
+}
+
+.coiv {
+    background-image: url("CoIV.webp");
+}
+
+.tow {
+    background-image: url("ToW.webp");
+}
+
+.content {
+    position: relative;
+    max-width: 700px;
+    padding: 0 1.6rem;
+}
+
+.content h2 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    letter-spacing: 10px;
+}
+
+.content p {
+    font-size: 1.5rem;
+    list-style: 1.5;
+    color: rgb(255, 255, 255);
+}
+
+footer{
+    background: rgba(23, 81, 67, 0.67);
+    text-align: center;
+    padding: 1.2rem 0;
+    color: whitesmoke;
+    font-size: 1.5rem;
+}
