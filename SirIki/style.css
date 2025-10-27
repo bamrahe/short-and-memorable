@@ -1,0 +1,171 @@
+/* RESET HTML DAN BODY */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: cornflowerblue;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(241, 215, 19, 0.5);
+    backdrop-filter: blur(5px);
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    /* flex-direction: row-reverse; */
+    align-items: center;
+    padding: 0 5%;
+    z-index: 999;
+}
+
+.logo {
+    text-decoration: none;
+    font-weight: 750;
+    font-size: 1.5rem;
+    color: darkorchid;
+    letter-spacing: 1.1px;
+}
+
+.nav-items {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-items a {
+    text-decoration: none;
+    color: black;
+    font-weight: 900;
+    position: relative;
+    transition: color 0.3 ease;
+    /* text decoration none */
+    /* ubah warna */
+    /* ubah tebal text (opsional) */
+    /* position : relative */
+    /* transition */
+}
+
+.nav-items a:hover {
+    color: red;
+}
+
+/* ctrl+? untuk buat komentar */
+
+/* STYLE DROP DOWN */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgba(176, 187, 20, 0.6);
+    flex-direction: column;
+    display: none;
+    padding: 0.5rem;
+    min-width: 100px;
+    border-radius: 3px;
+}
+
+.dropdown-menu li {
+    list-style: none;
+}
+
+.dropdown-menu a {
+    padding: 0.5rem 1 rem;
+    display: block;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: flex;
+}
+
+.character {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    text-align: center;
+}
+
+.character::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.hero {
+    background-image: url("https://images.alphacoders.com/139/1390963.jpg");
+}
+
+.about {
+    background-color: burlywood;
+}
+
+.sakamoto {
+    background-image: url("https://www.themarysue.com/wp-content/uploads/2022/04/Sakamoto-Days.jpg?fit=1200%2C675");
+}
+
+.shin {
+    background-image: url("https://images4.alphacoders.com/138/thumb-1920-1388248.png");
+}
+
+.nagumo {
+    background-image: url("https://cdn.mos.cms.futurecdn.net/iceKxLQnsJkgpRuRLXzLWg.jpg");
+}
+
+.content {
+    position: relative;
+    max-width: 700px;
+    padding: 0 1.6rem;
+}
+
+.content h2 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    letter-spacing: 10px;
+    color: white;
+}
+
+.content p {
+    font-size: 1.5rem;
+    list-style: 1.5;
+    color: aliceblue;
+}
+
+.content h2 a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.content h2 a:hover {
+    color: red;
+}
+
+footer {
+    background: rgb(6, 216, 153);
+    text-align: center;
+    padding: 1.2rem 0;
+    color: whitesmoke;
+    font-size: 1.5rem;
+}
