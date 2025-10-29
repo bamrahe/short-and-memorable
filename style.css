@@ -1,4 +1,3 @@
-html,
 body{
     height: 100vh;
     margin: 0;
@@ -6,7 +5,7 @@ body{
     background: linear-gradient(to bottom, rgba(126, 66, 5, 0.63), rgba(210, 205, 175, 0.644));
     text-align: center;
     color: rgba(67, 67, 67, 0.67);
-    overflow: hidden;
+    /*overflow: hidden;
     /*YOU SCROLL YOU DIE*/
 }
 
@@ -14,7 +13,7 @@ body{
     margin:0 auto;
     padding: 50px 20px;
     max-width: 500px;
-    background-color: rgb(235, 231, 181);
+    background-color: rgb(237, 211, 168);
     text-align: center;
     margin: 30px auto;
     border-radius: 20px;
@@ -71,27 +70,4 @@ h1:hover{
     transform: translateY(-5px);
     box-shadow: 2px 4px 6px rgba(170, 250, 136, 0.5);
     color: red;
-}
-
-.socialmedia{
-    margin-top: 40px;
-}
-
-.socialmedia a svg{
-    width: 30px;
-    height: 30px;
-    object-fit: contain;
-    margin: 0 10px;
-    filter: brightness(0) invert(1);
-    vertical-align: middle;
-}
-
-.footer{
-    padding-top: 20px;
-    animation: footer 2s infinite;
-}
-
-@keyframes footer{
-    2%, 100%{opacity: 1;}
-    50%{opacity: 0;}
 }
