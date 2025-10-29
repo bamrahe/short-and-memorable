@@ -75,11 +75,30 @@ h1:hover{
 
 .socialmedia{
     margin-top: 40px;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    display: flex;
+    gap: 10px; 
 }
 
-.socialmedia a svg{
-    width: 30px;
-    height: 30px;
+/*
+.socialmedia a{
+    padding: 0.75rem;
+    border-radius: 50%;
+    height: 48px;
+    width: 48px;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.67);
+}
+    */
+
+.socialmedia a img{
+    width: 40px;
+    height: 40px;
     object-fit: contain;
     margin: 0 10px;
     filter: brightness(0) invert(1);
