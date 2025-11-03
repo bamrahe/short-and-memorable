@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>what i did this weekend</title>
+</head>
+<body>
+    <style>
+.table_component {
+    overflow: auto;
+    width: 100%;
+}
+
+.table_component table {
+    border: 2.5px solid #dededf;
+    height: 100%;
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: separate;
+    border-spacing: 5px;
+    text-align: left;
+}
+
+.table_component caption {
+    caption-side: top;
+    text-align: center;
+}
+
+.table_component th {
+    border: 2.5px solid #dededf;
+    background-color: #eceff1;
+    color: #000000;
+    padding: 10px;
+}
+
+.table_component td {
+    border: 2.5px solid #dededf;
+    padding: 10px;
+}
+
+.table_component tr:nth-child(even) td {
+    background-color: #ff5c5c;
+    color: #000000;
+}
+
+.table_component tr:nth-child(odd) td {
+    background-color: #000000;
+    color: #fff5f5;
+}
+</style>
+<div class="table_component" role="region" tabindex="0">
+<table>
+    <caption>
+        <p>homework simulator</p>
+    </caption>
+    <thead>
+        <tr>
+            <th><br></th>
+            <th>Morning</th>
+            <th>Afternoon</th>
+            <th>Evening</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Saturday</td>
+            <td>Breakfast</td>
+            <td>Play games</td>
+            <td>Dinner outside</td>
+        </tr>
+        <tr>
+            <td>Sunday</td>
+            <td>Church</td>
+            <td>Play games</td>
+            <td>Dinner</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+</body>
+</html>
