@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>copyandpaste</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 2px solid #000000;
+            border-collapse: collapse;
+        }
+
+        table {
+            width: 80%;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <style>
+.table_component {
+    overflow: auto;
+    width: 100%;
+}
+
+.table_component table {
+    border: 2.5px solid #dededf;
+    height: 100%;
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: separate;
+    border-spacing: 5px;
+    text-align: center;
+}
+
+.table_component caption {
+    caption-side: top;
+    text-align: center;
+}
+
+.table_component th {
+    border: 2.5px solid #dededf;
+    background-color: #eceff1;
+    color: #000000;
+    padding: 10px;
+}
+
+.table_component td {
+    border: 2.5px solid #dededf;
+    padding: 10px;
+}
+
+.table_component tr:nth-child(even) td {
+    background-color: #ff5c5c;
+    color: #000000;
+}
+
+.table_component tr:nth-child(odd) td {
+    background-color: #000000;
+    color: #fff5f5;
+}
+</style>
+<div class="table_component" role="region" tabindex="0">
+    <table>
+        <tr>
+            <th colspan="3">Abam STORE</th>
+        </tr>
+        <tr>
+            <th rowspan="2">Items</th>
+            <th colspan="2">Price</th>
+        </tr>
+        <tr>
+            <th>Before discount</th>
+            <th>After discount</th>        
+        </tr>
+        <tr>
+            <td><img style="width: 100px;"
+            src="https://tr.rbxcdn.com/180DAY-e282403fc1ae019710c7b9d033e9fb7c/256/256/Image/Webp/noFilter"
+            alt=""></td>
+            <td>1.500.000</td>
+            <td>500.000</td>
+        </tr>
+        <tr>
+            <td><img style="width: 100px;"
+            src="https://tr.rbxcdn.com/180DAY-14d5b1062d10d80f710f11629a363498/256/256/Image/Webp/noFilter"
+            alt=""></td>
+            <td>2.500.000</td>
+            <td>750.000</td>
+        </tr>
+        <tr>
+            <td><img style="width: 100px;"
+            src="https://tr.rbxcdn.com/180DAY-b71bed229db3c355ffa36fa7d7129e64/256/256/Image/Webp/noFilter"
+            alt=""></td>
+            <td>1.000.000</td>
+            <td>250.000</td>
+        </tr>
+        <tr>
+            <th colspan="3">imagine do big sees this</th>
+        </tr>
+    </table>
+</body>
+</html>

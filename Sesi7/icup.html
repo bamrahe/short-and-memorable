@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+.table_component {
+    overflow: auto;
+    width: 100%;
+}
+
+.table_component table {
+    border: 2.5px solid #dededf;
+    height: 100%;
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: separate;
+    border-spacing: 5px;
+    text-align: left;
+}
+
+.table_component caption {
+    caption-side: top;
+    text-align: center;
+}
+
+.table_component th {
+    border: 2.5px solid #dededf;
+    background-color: #eceff1;
+    color: #000000;
+    padding: 10px;
+}
+
+.table_component td {
+    border: 2.5px solid #dededf;
+    padding: 10px;
+}
+
+.table_component tr:nth-child(even) td {
+    background-color: #ff5c5c;
+    color: #000000;
+}
+
+.table_component tr:nth-child(odd) td {
+    background-color: #000000;
+    color: #fff5f5;
+}
+</style>
+<div class="table_component" role="region" tabindex="0">
+    <table>
+        <caption>My Weekend Schedule</caption>
+        <thead>
+        <tr>
+            <th><br></th>
+            <th>Saturday</th>
+            <th>Sunday</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Morning</td>
+            <td>Breakfast</td>
+            <td>Church</td>
+        </tr>
+        <tr>
+            <td>Afternoon</td>
+            <td>Play games</td>
+            <td>Play games</td>
+            
+ 
+        </tr>
+         <tr>
+            <td>Evening</td>
+            <td>Dinner outside</td>
+            <td>Dinner</td>
+        </tr>
+    </tbody>
+    </table>
+    <hr>
+    <h1>contoh colspan</h1>
+    <table border="1">
+        <tr>
+            <th>ran?dom</th>
+            <th colspan="4">6767676767</th>
+        </tr>
+        <tr>
+            <td>code</td>
+            <td>67</td>
+            <td>875</td>
+            <td>2893</td>
+            <td>74764</td>
+        </tr>
+        <tr>
+            <td>sports</td>
+            <td colspan="2">yes</td>
+            <td colspan="2">no</td>
+        </tr>
+    </table>
+
+    <hr>
+    <h1>contoh rowspan</h1>
+    <table>
+        <caption>To avoid automatically configuring upstream branches when their name doesn't match the local branch, see option 'simple' of branch.autoSetupMerge in</caption>
+        <tr>
+            <th>ran?dom</th>
+            <td>code</td>
+            <td>sports</td>
+        </tr>
+
+        <tr>
+            <th rowspan="4">Do vaccines cause hjkasdsdaj kj ndsa?</th>
+            <td>word</td>
+            <td rowspan="2">wordword</td>
+        </tr>
+
+        <tr>
+            <td>98983798687686</td>
+        </tr>
+
+        <tr>
+            <td>EUGEUGEUHU</td>
+            <td rowspan="2">dieshauhduheuah</td>
+        </tr>
+        
+        <tr>
+            <td>qwerty</td>
+        </tr>
+    </table>
+    
+</body>
+</html>
