@@ -1,13 +1,13 @@
 body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin: 0;
-    padding: 0;
-    background: rgba(196, 225, 255, 0.9999999999999999999999);
+    margin: 20px;
+    padding: 20px;
+    background: linear-gradient(to bottom, brown, rgb(244, 209, 120));
     text-align: center;
 }
 
 nav {
-    background: rgb(125, 130, 24);
+    background: rgb(236, 240, 171);
     width: 100%;
     height: 60px;
     padding: 10px 20px;
@@ -23,23 +23,23 @@ nav {
 .logo {
     text-decoration: none;
     font-size: 30px;
-    color: cadetblue;
+    color: rgb(0, 0, 0);
     font-weight: 500
 }
 
 .nav-links {
     display: flex;
-    gap: 30px;
+    gap: 0px;
     list-style: none;
-    margin: 0;
-    padding: 0;
+    margin: 10px;
+    padding: 10px;
 }
 
 .nav-links li {
     text-decoration: none;
     color: rgb(124, 42, 42);
     font-size: 15px;
-    padding: 10px;
+    padding: 20px;
     display: inline-block;
     text-align: center;
     min-width: 100px;
@@ -50,21 +50,62 @@ nav {
     border-radius: 5px;
 }
 
+.nav-items a:hover {
+    color: red;
+}
+
+/* STYLE DROP DOWN */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgba(176, 187, 20, 0.6);
+    flex-direction: column;
+    display: none;
+    padding: 0.5rem;
+    min-width: 100px;
+    border-radius: 3px;
+}
+
+.dropdown-menu li {
+    list-style: none;
+}
+
+.dropdown-menu a {
+    padding: 0.5rem 1 rem;
+    display: block;
+}
+
+.dropdown:hover .dropdown-menu{
+    display: flex;
+}
+
 .container {
     width: 80%;
     margin: auto;
-    background-color: blanchedalmond;
-    padding: 80px 20px 20px;
+    background-color: hsl(2, 88%, 20%);
+    padding: 10px 20px 20px;
+    border-radius: 10px;
+    position: relative;
+
 }
 
 header {
-    padding: 15px;
-    background: rgb(121, 232, 212);
-    color: rgb(58, 148, 231);
-    border-radius: 20px;
-    margin-top: 10px;
+    padding: 0px;
+    padding-top: 30px;
+    color: rgb(56, 2, 8);
     font-size: 25px;
     letter-spacing: 5px;
+}
+
+h4 {
+    color: rgb(247, 244, 242);
+    text-align: center;
+    font-size: 30px;
 }
 
 .profile {
@@ -103,6 +144,26 @@ header {
     font-size: 20px;
 }
 
+.grade {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.grade img {
+    width: 200px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.25s ease-in-out
+}
+
+.grade img:hover {
+    transform: scale(1.1);
+    opacity: 100%;
+}
+
 .gallery {
     display: flex;
     justify-content: center;
@@ -111,11 +172,12 @@ header {
 }
 
 .gallery img {
-    width: 200px;
-    height: 130px;
-    object-fit: cover;
-    border-radius: 10px;
-    transition: transform 0.25s ease-in-out
+    width: 500px;
+    display: block;
+    margin: 0 auto 5rem;
+    border-radius: 20px;
+    transition: transform 0.2s;
+    position: relative;
 }
 
 .gallery img:hover {
@@ -123,12 +185,100 @@ header {
     opacity: 100%;
 }
 
+/* Hide the images by default */
+.mySlides {
+  display: 100px;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Button Position  */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+
 footer {
     margin-top: 20px;
-    background-color: rgb(59, 120, 94);
+    background-color: rgb(0, 0, 0);
     padding: 5px;
-    color: rgb(153, 104, 104);
+    color: rgb(255, 255, 255);
     border-radius: 10px;
     font-weight: 700;
     font-size: 12px;
+}
+
+@keyframes footer{
+    2%, 100%{opacity: 1;}
+    50%{opacity: 0;}
 }
