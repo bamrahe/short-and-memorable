@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+.container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+</style>
+
+<body>
+    <div class="container">
+        <form>
+        <label for="text">Text : </label>
+        <input type="text" id="name" placeholder="ketik nama disini" maxlength="20" required>
+        <br>
+        <label for="password">Password : </label>
+        <input type="password" id="password" placeholder="password..." required>
+        <br>
+
+        <input type="radio" id="python" name="program">
+        <label for="python">Radio 1</label>
+        <input type="radio" id="html" name="program">
+        <label for="html">Radio 2</label>
+        <br>
+
+        <input type="checkbox" id="yes" name="cocomelon">
+        <label for="yes">Checkbox 1</label>
+        <input type="checkbox" id="no" name="cocomelon">
+        <label for="no">Checkbox 2</label>
+        <br>
+
+        <label for="city">Combo Box : </label>
+        <select name="city" id="city">
+            <option value="jakarta">Option 1</option>
+            <option value="bandung">Option 2</option>
+            <option value="denpasar">Option 3</option>
+            <option value="semarang">Option 4</option>
+        </select>
+
+        <br>
+        <label for="address">Textarea :</label>
+        <textarea name="address" id="address" cols="10" rows="2"></textarea>
+        <br>
+        <button type="submit" onclick="alert('submit it')">Button</button>
+        </form>
+    </div>
+</body>
+</html>

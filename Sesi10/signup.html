@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>website sekolah - sign up</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>SIGN UP</h2>
+        <p>Welcome to WebSchool</p>
+    
+    <form>
+        <!--name-->
+        <div class="input-group">
+            <label>First Name</label>
+            <input type="text" required placeholder="enter first name">
+        </div>
+
+        <div class="input-group">
+            <label>Last Name</label>
+            <input type="text" required placeholder="enter last name">
+        </div>
+
+        <!--gender-->
+        <div class="input-group">
+            <label>gender</label>
+            <div class="gender">
+                <p><input type="radio" name="gender">Male</p>
+                <p><input type="radio" name="gender">Female</p>
+            </div>
+        </div>
+
+        <!--email-->
+        <div class="input-group">
+            <label>Email</label>
+            <input type="text" required placeholder="enter email">
+        </div>
+
+        <!--password-->
+        <div class="input-group">
+            <label>Password</label>
+            <input type="password" required placeholder="enter your password">
+        </div>
+
+        <div class="input-group">
+            <label>Confirm Password</label>
+            <input type="password" required placeholder="confirm your password">
+        </div>
+
+        <br>
+        <button type="submit" class="button" onclick="alert('submit it')">Submit</button>
+    </form>
+    </div>
+</body>
+</html>

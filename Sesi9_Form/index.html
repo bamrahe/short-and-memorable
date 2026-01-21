@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- input text field -->
+     <form>
+        <label for="name">Name : (DO IT OR ELSE)</label>
+        <input type="text" id="name" placeholder="ketik nama disini" maxlength="20" required>
+        <br>
+        <label for="password">Password : (DO IT OR ELSE)</label>
+        <input type="password" id="password" placeholder="password..." required>
+        <br>
+
+        <!--input radio-->
+        <label for="radio">Program Language</label>
+        <br>
+        <input type="radio" id="python" name="program">
+        <label for="python">python</label>
+        <br>
+        <input type="radio" id="html" name="program">
+        <label for="html">html</label>
+        <br>
+        <input type="radio" id="js" name="program">
+        <label for="js">js</label>
+        <br>
+
+        <!--input checkbox-->
+        <p>is cocomelon brainrot</p>
+        <input type="checkbox" id="yes" name="cocomelon">
+        <label for="yes">yes</label>
+        <br>
+        <input type="checkbox" id="no" name="cocomelon">
+        <label for="no">no</label>
+        <br>
+
+        <!--date of birth-->
+        <br>
+        <label for="birthday">give me your birthday for free robux</label>
+        <br>
+        <input type="date" name="birthday" id="">
+        <br>
+
+        <!--select element (111 rg)-->
+        <br>
+        <label for="city">give me your city for free robux</label>
+        <select name="city" id="city">
+            <option value="jakarta">jakarta</option>
+            <option value="bandung">bandung</option>
+            <option value="denpasar">denpasar</option>
+            <option value="semarang">semarang</option>
+        </select>
+        <br>
+
+        <!--text area-->
+        <br>
+        <label for="address">give me your address for free robux</label>
+        <br>
+        <textarea name="address" id="address" cols="20" rows="5"></textarea>
+        <!--reset submit-->
+        <br>
+        <button type="reset" onclick="alert('form reset')">reset</button>
+        <br>
+        <button type="submit" onclick="alert('submit it')">submit</button>
+     </form>
+</body>
+</html>
