@@ -27,31 +27,119 @@
         <div class="input-group">
             <label>gender</label>
             <div class="gender">
-                <p><input type="radio" name="gender">Male</p>
-                <p><input type="radio" name="gender">Female</p>
+                <p><input type="radio" name="gender" value="male" required> Male</p>
+                <p><input type="radio" name="gender" value="female" required> Female</p>
             </div>
         </div>
 
-        <!--email-->
+         <!--email-->
         <div class="input-group">
             <label>Email</label>
-            <input type="text" required placeholder="enter your email">
+            <input type="email" id="email" required placeholder="enter your email @sekolahchis.com">
         </div>
 
         <!--password-->
         <div class="input-group">
             <label>Password</label>
-            <input type="password" required placeholder="enter your password">
+            <div class="password-wrapper">
+                <input type="password" id="password" required placeholder="enter your password">
+                <img src="./assets/hide.png" alt="showpw" class="eye-icon">
+            </div>
+        </div>
+       
+        <div class="input-group">
+            <label>Re-enter Password</label>
+            <div class="password-wrapper">
+                <input type="password" id="confirmPassword" required placeholder="re-enter your password">
+                <img src="./assets/hide.png" alt="showpw" class="eye-icon">
+            </div>
+
+            <small id="errorText" style="display: none;">password not matching</small>
         </div>
 
-        <div class="input-group">
-            <label>Confirm Password</label>
-            <input type="password" required placeholder="confirm your password">
-        </div>
+
+        <!--button submit-->
 
         <br>
-        <button type="submit" class="button" onclick="alert('submit it')">Submit</button>
+        <button type="submit">Submit</button>
+        
+        <!--go sign in-->
+        <div class="small-text">
+            Already have account? <a href="signin.html">Sign in here</a>
+        </div>
     </form>
     </div>
+
+    <script>
+        const form = document.querySelector("form");
+        const password = document.getElementById("password");
+        const confirmPassword = document.getElementById("confirmPassword");
+        const emailInput = document.getElementById("email");
+        const errorText = document.getElementById("errorText");
+        const eyeIcons = document.querySelectorAll(".eye-icon");
+
+        /* =========================
+        1. Match Password (live)
+        ========================== */
+        confirmPassword.addEventListener("input", () => {
+            if (password.value !== confirmPassword.value) {
+                errorText.style.display = "block";
+                errorText.style.color = "red";
+            } else {
+                errorText.style.display = "none";
+            }
+        });
+
+        /* =========================
+        2. Show & Hide Password
+        ========================== */
+        eyeIcons.forEach((icon) => {
+            icon.addEventListener("click", () => {
+                const input = icon.previousElementSibling;
+
+                if (input.type === "password") {
+                    input.type = "text";
+                    icon.src = "./assets/view.png";
+                } else {
+                    input.type = "password";
+                    icon.src = "./assets/hide.png";
+                }
+            });
+        });
+
+        /* =========================
+        3. Submit Validation
+        ========================== */
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            // 1. Password length
+            if (password.value.length < 8) {
+                alert("Password minimum 8 character");
+                return;
+            }
+
+            // 2. Password match
+            if (password.value !== confirmPassword.value) {
+                errorText.style.display = "block";
+                errorText.style.color = "red";
+                return;
+            }
+
+            // 3. Email domain check
+            const emailValue = emailInput.value.trim().toLowerCase();
+            const schoolEmailPattern = /^[a-z0-9._%+-]+@sekolahchis\.com$/;
+
+            if (!schoolEmailPattern.test(emailValue)) {
+                alert("Email should be @sekolahchis.com");
+                return;
+            }
+
+            // 4. Success
+            alert("Sign up success 🎉");
+            form.reset();
+            errorText.style.display = "none";
+        });
+    </script>
 </body>
 </html>

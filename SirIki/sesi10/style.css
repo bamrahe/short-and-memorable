@@ -1,0 +1,154 @@
+/* Reset Global Style */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background: linear-gradient(150deg, #f1f1f1f1, #bd8b8bf1);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background: #f3ebf0f1;
+    padding: 30px 35px;
+    width: 100%;
+    max-width: 450px;
+    margin: 20px;
+    border-radius: 13px;
+    box-shadow: 0 15px 30px rgba(225, 13, 13, 0.3);
+}
+
+.container h2 {
+    text-align: center;
+    margin-bottom: 7px;
+}
+
+.container p {
+    text-align: center;
+    font-size: 14px;
+    color: rgb(19, 11, 11);
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    margin-bottom: 20px;
+}
+
+/* FORM & INPUT  */
+.input-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-size: 13px;
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bolder;
+}
+
+::placeholder {
+    font-size: 12px;
+    font-style: italic;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 8px;
+    border: 2px solid rgba(37, 37, 37, 0.351);
+}
+
+/* select {} */
+
+input:hover {
+    background-color: #f2efeff1;
+}
+
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: rgb(222, 115, 115);
+    background-color: aliceblue;
+}
+
+/* Radio Check */
+.gender {
+    display: flex;
+    gap: 30px;
+    text-align: center;
+}
+
+.gender p {
+    font-size: 12px;
+}
+
+/* button */
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background-color: rgba(222, 87, 87, 0.811);
+    color: #f1f1f1;
+    font-size: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgba(228, 137, 137, 0.811);
+}
+
+/* small text information */
+.small-text {
+    font-size: 12px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.small-text a {
+    color: red;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.small-text a:hover {
+    color: rgba(228, 137, 137, 0.811);
+}
+
+.input-group small {
+    font-size: 12px;
+    font-weight: 400;
+    color: grey;
+    margin-top: 5px;
+    display: block;
+}
+
+/* Password */
+.password-wrapper {
+    position: relative;
+}
+
+.password-wrapper input {
+    padding-right: 40px;
+}
+
+.eye-icon {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.eye-icon:hover {
+    opacity: 1;
+}

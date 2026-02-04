@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excul registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>SPK SD CHIS Denpasar</h2>
+        <p>Extra Curricular Refistration</p>
+    
+    <form id="registerForm">
+        <!--name-->
+        <div class="input-group">
+            <label>Full Name</label>
+            <input type="text" id="fullname" required placeholder="enter your full name">
+
+        </div>
+
+        <div class="input-group">
+            <label>Phone Number</label>
+            <input type="text" id="phone" required placeholder="enter your phone number">
+
+        </div>
+
+        <!--gender-->
+        <div class="input-group">
+            <label>gender</label>
+            <div class="gender">
+                <p><input type="radio" name="gender" value="male" required> Male</p>
+                <p><input type="radio" name="gender" value="female" required> Female</p>
+            </div>
+        </div>
+
+        <!--school-->
+        <div class="input-group">
+            <label>School</label>
+            <input type="text" id="school" required placeholder="enter your school">
+        </div>
+
+        <!--class-->
+        <div class="input-group">
+            <label for="class">Grade</label>
+            <select name="city" id="city">
+                <option value="grade1">Grade 1</option>
+                <option value="grade2">Grade 2</option>
+                <option value="grade3">Grade 3</option>
+                <option value="grade4">Grade 4</option>
+                <option value="grade5">Grade 5</option>
+                <option value="grade6">Grade 6</option>
+            </select>
+        </div>
+
+         <!--email-->
+        <div class="input-group">
+            <label>Email</label>
+            <input type="email" id="email" required placeholder="enter your email @sekolahchis.com">
+        </div>
+
+        <!--excul-->
+        <div class="input-group">
+        <label>Excul interested (MaX 2)</label>
+            <div class="excul-list">
+                <label>Basket<input type="checkbox" class="excul"></label>
+                <label>Coding<input type="checkbox" class="excul"></label>
+                <label>Ballet<input type="checkbox" class="excul"></label>
+                <label>Math Club<input type="checkbox" class="excul"></label>
+                <label>English Club<input type="checkbox" class="excul"></label>
+                <label>Modern Dance<input type="checkbox" class="excul"></label>
+                <label>Traditional Dance<input type="checkbox" class="excul"></label>
+                <label>Wushu<input type="checkbox" class="excul"></label>
+            </div>
+
+            <small id="exculWarning" style="color:red; display:none;">Max 2</small>
+        </div>
+
+
+        <!--upload photo-->
+        <div class="input-group">
+        <label>Upload Photo</label>
+        <input type="file" required accept=".jpg, .png">
+        <small">*Format .jpg, .png </small>
+        </div>
+
+        <!--button submit-->
+
+        <br>
+        <button type="submit">Register</button>
+        
+    </form>
+    </div>
+
+    <script>
+        const ekskulCheckbox = document.querySelectorAll(".excul");
+        const warning = document.getElementById("exculWarning");
+
+        ekskulCheckbox.forEach((checkbox) => {
+            checkbox.addEventListener("change", function () {
+                const checkedCount = document.querySelectorAll(".excul:checked").length;
+
+                if (checkedCount > 2) {
+                    this.checked = false;
+                    warning.style.display = "block";
+                } else {
+                    warning.style.display = "none";
+                }
+            });
+        });
+
+
+        const form = document.getElementById("registerForm");
+
+        form.addEventListener("submit", function (e) {
+            // cek validasi HTML (required, email, dll)
+            if (form.checkValidity()) {
+                e.preventDefault(); // tahan submit bawaan
+
+                alert("✅ Data sent succesful!\nThank you for register.");
+
+                form.reset(); // RESET SEMUA FIELD
+            }
+        });
+
+    </script>
+
+</body>
+</html>
