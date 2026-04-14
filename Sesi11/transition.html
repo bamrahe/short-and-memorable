@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform and transition</title>
+    <style>
+        .box {
+            height: 100px;
+            width: 300px;
+            background-color: darkkhaki;
+            margin: 200px auto;
+            color: #f1f1f1;
+        }
+        .box p {
+            color: black;
+            padding: 20px;
+        }
+        .box h1 {
+            text-align: center;
+        }
+        .box h1:hover {
+            cursor: pointer;
+            color: brown;
+            transition: all 2s linear;
+            transform: rotate(360deg);
+        }
+
+        .box p:hover {
+            cursor: pointer;
+            transition: all 0.1s ease-in;
+            transform: scaleY(1.2);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>Learn HTML and CSS</h1>
+        <p>Lorem ipsum dolor sit amet. Aut ullam ipsa et debitis tempora ut fugit deleniti. Aut maxime ducimus ea magni sequi et quod officia sit beatae aperiam aut facilis placeat qui animi nostrum aut doloribus cumque. Sit tenetur velit ab quis nulla nam fuga quae et deleniti beatae. Est nemo adipisci ut voluptatem accusantium vel voluptatem autem est rerum internos id voluptatem facere.</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-COMMERCE RESPONSIVE</title>
+    <!-- link style utama -->
+    <link rel="stylesheet" href="./dist/css/style.css">
+
+    <!-- link remix icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet" . />
+
+    <!-- link AOS -->
+    <Link-rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <div class="navbar">
+        <div class="container">
+            <div class="navbar-box">
+                <a href="#">
+                    <h1 class="robotoslab">ABAMS STORE</h1>
+                </a>
+
+                <ul class="menu">
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#service">Service</a></li>
+                    <li><a href="#product">Product</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+
+                <div class="nav-icon">
+                    <div class="cart2">
+                        <i class="ri-shopping-bag-line" id="cart-btn"></i>
+                        <span class="cart-count">0</span>
+                    </div>
+
+                    <i class="ri-menu-line ri-2x"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- NAVBAR -->
+
+
+    <!-- HERO / MAIN PAGE -->
+    <div class="hero robotoslab" id="hero">
+        <div class="container">
+            <div class="hero-box">
+                <div class="box">
+                    <h1>Catalogue<br>Product</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor minima repudiandae, aspernatur
+                        eligendi beatae quam?</p>
+                    <a href="#">Detail Products</a>
+                </div>
+                <div class="box">
+                    <img src="./assets/rubic.png" alt="imagehero">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- HERO / MAIN PAGE -->
+
+    <!-- servant -->
+    <div class="layanan" id="service">
+        <div class="container">
+            <div class="layanan-box">
+                <div class="box">
+                    <i class="ri-star-fill ri-2x"></i>
+                    <h2>Product Original</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, cupiditate?</p>
+                </div>
+                <div class="box">
+                    <i class="ri-price-tag-2-fill ri-2x"></i>
+                    <h2>Affordable</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, fuga.</p>
+                </div>
+                <div class="box">
+                    <i class="ri-shopping-cart-fill ri-2x"></i>
+                    <h2>Purchased 300k+</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis, perferendis.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- servant -->
+
+    <!-- products -->
+    <div class="product" id="product">
+        <div class="container">
+            <h2 class="title">Our Products</h2>
+
+            <div class="product-box">
+                <div class="product-card">
+                    <img src="./assets/rubic.png">
+                    <h3>Rubic Cube</h3>
+                    <p>Rp. 100.000</p>
+                    <button class="add-cart" data-name="RubicCube" data-price="100000">Add to Cart</button>
+                </div>
+
+                <div class="product-card">
+                    <img src="./assets/marbles.png">
+                    <h3>Marbles</h3>
+                    <p>Rp. 10.000</p>
+                    <button class="add-cart" data-name="Marbles" data-price="10000">Add to Cart</button>
+                </div>
+
+                <div class="product-card">
+                    <img src="./assets/unostacko.jpg">
+                    <h3>Uno Stacko</h3>
+                    <p>Rp. 150.000</p>
+                    <button class="add-cart" data-name="UnoStacko" data-price="150000">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- products -->
+
+    <!-- FART -->
+    <div class="cart">
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+            <i class="ri-close-large-fill close-cart"></i>
+        </div>
+
+        <div class="cart-items"></div>
+        <div class="cart-footer">
+            <p>Subtotal: <span class="subtotal">IDR 0</span></p>
+        </div>
+    </div>
+    <!-- FART -->
+
+    <!-- FOOTER -->
+    <!-- FOOTER -->
+
+    <!-- SCRIPT UTAMA -->
+    <script src="./dist/script/script.js"></script>
+
+    <!--script AOS-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
