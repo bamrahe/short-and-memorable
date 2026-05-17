@@ -9,6 +9,9 @@
     <!-- link style utama -->
     <link rel="stylesheet" href="./dist/css/style.css">
 
+    <!-- icon website -->
+    <link rel="icon" href="./assets/rubic.png">
+
     <!-- link remix icon -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet" . />
 
@@ -131,11 +134,119 @@
         <div class="cart-footer">
             <p>Subtotal: <span class="subtotal">IDR 0</span></p>
         </div>
+
+        <button id="checkoutBtn" class="checkout-btn">checkout</button>
     </div>
     <!-- FART -->
 
-    <!-- FOOTER -->
-    <!-- FOOTER -->
+    <!-- feeter -->
+    <footer class="footer" id="contact">
+        <!--top of feet-->
+        <div class="footer-top">
+            <div class="container footer-top-box">
+                <p>ACCEPTED PAYMENT</p>
+
+                <div class="payment-icons">
+                    <span>VISA</span>
+                    <i class="ri-mastercard-fill"></i>
+                </div>
+            </div>
+        </div>
+
+        <!--bottom feet-->
+        <div class="footer-bottom">
+            <div class="container footer-bottom-box">
+                <!--left-->
+                <div class="footer-left">
+                    <a href-#>FAQ</a>
+                    <a href-#>CONTACT US</a>
+                </div>
+                <!--center-->
+                <div class="footer-center">
+                    <a href-#>Terms & Conditions</a>
+                    <a href-#>Privacy Policy</a>
+                    <span>&copy; 2026 compass &reg;, site by abam</span>
+                </div>
+                <!--right-->
+                <div class="footer-right">
+                    <a href-#><i class="ri-youtube-line"></i></a>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    <!-- feeter -->
+
+
+    <!--poop up product-->
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <i class="ri-close-line close-popup"></i>
+
+            <div class="pop-body">
+                <!-- main image-->
+                <div class="popup-left">
+                    <button class="nav prev">
+                        <i class="ri-arrow-left-s-line"></i>
+                    </button>
+
+                     <img src="./assets/rubic.png" id="mainImg">
+                    
+                    <h3 id="productTitle"></h3>
+
+                    <button class="nav next">
+                        <i class="ri-arrow-right-s-line"></i>
+                    </button>
+                </div>
+
+                <!--thumbnail-->
+                <div class="popup-right" id="thumbnailContainer"></div>
+            </div>
+        </div>
+    </div>
+    <!--poop up product-->
+
+    <!--poop up a checkout-->
+    <div class="checkout-popup" id="checkoutPopup">
+        <div class="checkout-box">
+            <i class="ri-close-line close-checkout"></i>
+
+            <h2>CHECKOUT</h2>
+            <input type="text" id="name" placeholder="name">
+            <input type="text" id="address" placeholder="address (for free robux)">
+            <input type="number" id="hp" placeholder="phone number (also for free robux)">
+
+            <h3>Shipping</h3>
+            <select name="" id="shipping">
+                <option value="jne">JNE</option>
+                <option value="jnt">J&T</option>
+                <option value="tiki">TIKI</option>
+                <option value="sicepat">SiCepat</option>
+            </select>
+
+            <h3>Payment</h3>
+
+            <div class="payment-option active" data-method="qris">
+                <i class="ri-qr-code-line"></i>
+                <span>QRIS</span>
+            </div>
+
+            <div class="payment-option active" data-method="bank">
+                <i class="ri-bank-line"></i>
+                <span>Bank</span>
+            </div>
+
+            <div class="payment-option active" data-method="ewallet">
+                <i class="ri-wallet-line"></i>
+                <span>e-Wallet</span>
+            </div>
+
+            <button id="payNow">Pay Now (or else)</button>
+        </div>
+    </div>
+
+    <!--poop up a checkout-->
+
 
     <!-- SCRIPT UTAMA -->
     <script src="./dist/script/script.js"></script>

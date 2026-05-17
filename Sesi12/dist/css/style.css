@@ -35,7 +35,18 @@ body {
 
 .navbar {
     padding: 20px 0;
-    background-color: #d1cdcd;
+    background-color: wheat;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    transition: transform 0.3s ease;
+}
+
+/* kondisi hide */
+.navbar.hide {
+    transform: translateY(-100%);
 }
 
 .navbar-box {
@@ -62,6 +73,11 @@ body {
 .navbar-box .menu {
     display: flex;
     gap: 50px;
+    pointer-events: none;
+}
+
+.navbar-box .menu.menu-active{
+    pointer-events: auto;
 }
 
 .navbar-box .menu li {
@@ -116,6 +132,7 @@ body {
 /* hero */
 
 .hero {
+    margin-top: 80px;
     padding: 60px 0;
     background-color: rgb(163, 144, 119);
 }
@@ -225,6 +242,17 @@ body {
     display: flex;
     align-items: center;
     gap: 15px;
+    z-index: 2000;
+}
+
+.ri-menu-line{
+    cursor: pointer;
+    position: relative;
+    z-index: 2001;
+}
+
+.ri-menu-line:hover{
+    cursor: pointer;
 }
 
 .cart-count{
@@ -373,4 +401,359 @@ body {
 
 .remove:hover {
     text-decoration: underline;
+}
+
+/* feeter */
+.footer{
+    margin-top: 20px;
+    background-color: wheat
+}
+
+.footer-top{
+    background: rgb(117, 104, 87);
+    color: #ffffff;
+    padding: 18px 0;
+}
+
+.footer-top-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+.payment-icons{
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    font-weight: bolder;
+}
+
+.payment-icons span{
+    font-size: 20px;
+}
+
+/* bottom feet */
+.footer-bottom {
+    padding: 22px 0;
+    font-size: 20px;
+}
+
+.footer-bottom-box {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 20px;
+}
+
+/*left*/
+.footer-left{
+    display: flex;
+    gap: 20px;
+}
+
+.footer-left a {
+    text-decoration: none;
+    color: rgb(138, 0, 0);
+}
+
+/*center*/
+.footer-center{
+    display: flex;
+    gap: 20px;
+}
+
+.footer-center a {
+    text-decoration: none;
+    color: rgb(138, 0, 0);
+}
+
+/*right*/
+.footer-right{
+    display: flex;
+    gap: 20px;
+}
+
+.footer-right a {
+    text-decoration: none;
+    color: rgb(138, 0, 0);
+    font-size: 30px;
+}
+
+/*feet working*/
+@media (max-width:768px) {
+    .footer-bottom-box {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-left,
+    .footer-center,
+    .footer-right {
+        justify-content: center;
+    }
+}
+
+/* how the feet looks */
+
+/* poop up product */
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 1, 5, 0.25);
+    /* dark background */
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    overflow: visible;
+}
+
+.popup.active {
+    display: flex;
+}
+
+.popup-content {
+    background: rgb(163, 144, 119);
+    width: 95%;
+    max-width: 900px;
+    border-radius: 15px;
+    padding: 40px 20px 20px 20px;
+    /* Tambah padding atas untuk tombol close */
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.close-popup {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #333;
+    transition: 0.3s;
+    z-index: 2100;
+}
+
+.close-popup:hover {
+    color:#f8dcb8;
+    transform: scale(1.1);
+}
+
+/* impossible layout */
+
+.pop-body {
+    display: flex;
+    gap: 20px;
+    align-items: stretch;
+}
+
+.popup-left {
+    flex: 3;
+    position: relative;
+    background: #f1f1f1;
+    border-radius: 10px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.popup-left img {
+    width: 90%;
+    height: 90%;
+    object-fit: contain;
+}
+
+/* button nav popup Prev and Next */
+.nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 1, 5, 0.25);
+    color: #f1f1f1;
+    border: 1px solid #ddd;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.nav:hover {
+    background: coral;
+    color: white;
+    border-color: coral;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/*right thumb*/
+.popup-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    height: 450px; 
+    padding-right: 10px;
+    overflow-y: auto;
+}
+
+/* Custom Scrollbar untuk Slider Kanan */
+.popup-right::-webkit-scrollbar {
+    width: 6px;
+}
+
+.popup-right::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.popup-right::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 10px;
+}
+
+.popup-right::-webkit-scrollbar-thumb:hover {
+    background: coral;
+}
+
+.popup-right img {
+    width: 100%;
+    min-height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 3px solid transparent;
+    transition: 0.2s;
+    opacity: 0.7;
+}
+
+.popup-right img.active {
+    border-color: coral;
+    opacity: 1;
+    transform: scale(0.95);
+}
+
+#productTitle {
+    margin-top: 10px;
+    color: black;
+    font-weight: 500;
+    text-align: center;
+    position : relative;
+    z-index: 10;
+}
+
+/* poop up (high detail mode) */
+
+/* checkout button */
+.checkout-btn{
+    width: 100%;
+    background: rgb(147, 20, 20);
+    color: #e5f2e0;
+    padding: 12px;
+    font-size: 20px;
+    margin-top: 13px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.checkout-btn:hover {
+    opacity: 0.9182483471650817520872365087236485764057028365082346;
+}
+
+.checkout-popup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 1, 5, 0.25);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.checkout-popup.active{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkout-box{
+    background: rgb(163, 144, 119);
+    padding: 20px;
+    width: 300px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.checkout-box input,
+.checkout-box select {
+    padding: 10px;
+    border: 1px solid rgb(52, 39, 39);
+    border-radius: 7px;
+}
+
+.checkout-box button {
+    background-color: rgb(52, 39, 39);
+    color: #f1f1f1;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.close-checkout {
+    align-items: flex-end;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.payment-options {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    border: 1px solid black;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.payment-option i {
+    font-size: 20px;
+}
+
+.payment-option:hover {
+    border: 1px solid black;
+    background: #f1f1f1;
+}
+
+.payment-option.active {
+    border: 3px solid black;
+    background: #e5f2e0;
 }
