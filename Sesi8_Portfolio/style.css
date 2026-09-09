@@ -6,8 +6,13 @@ body {
     text-align: center;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 nav {
-    background: rgb(236, 240, 171);
+    background: linear-gradient(135deg, #402060, #7c2a2a);
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.2);
     width: 100%;
     height: 60px;
     padding: 10px 20px;
@@ -21,18 +26,22 @@ nav {
 }
 
 .logo {
+    color:white;
     text-decoration: none;
     font-size: 30px;
-    color: rgb(0, 0, 0);
+    font-weight: bold;
     font-weight: 600;
+    letter-spacing: 1px;
 }
 
 .nav-links {
     display: flex;
-    gap: 0px;
+    gap: 8px;
     list-style: none;
-    margin: 10px;
-    padding: 10px;
+    margin: 0px;
+    padding: 0px;
+    align-items: center;
+    list-style: none;
 }
 
 .nav-links li {
@@ -44,11 +53,28 @@ nav {
     text-align: center;
     min-width: 100px;
     cursor: pointer;
+    position: relative;
+}
+
+.nav-links a {
+  display: block;
+  padding: 10px 15px;
+  color: rgb(248, 160, 8);
+  font-size: 20px;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+  transform: translateY(-2px);
+  color: rgb(255, 255, 255);
 }
 
 .nav-links li:hover {
-    background: azure;
+    background: rgba(255, 255, 255, 0.2);
     border-radius: 5px;
+    transform: translateY(-2px);
 }
 
 .nav-items a:hover {
@@ -60,16 +86,26 @@ nav {
     position: relative;
 }
 
+.dropbtn span {
+  margin-left: 5px;
+  font-size: 12px;
+}
+
 .dropdown-menu {
     position: absolute;
-    top: 100%;
+    top: calc(100% + 10px);
     left: 0;
-    background: rgba(176, 187, 20, 0.6);
+    min-width: 160px;
+    list-style: none;
+    background: rgba(251, 240, 165, 0.6);
     flex-direction: column;
     display: none;
     padding: 0.5rem;
-    min-width: 100px;
     border-radius: 3px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    transform: translateY(-8px);
+    transition: 0.25s ease;
+    z-index: 10;
 }
 
 .dropdown-menu li {
@@ -79,10 +115,22 @@ nav {
 .dropdown-menu a {
     padding: 0.5rem 1 rem;
     display: block;
+    color: #402060;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.dropdown-menu a:hover {
+  color: rgb(173, 17, 17);
+  font-weight: bold;
 }
 
 .dropdown:hover .dropdown-menu{
     display: flex;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
 }
 
 .container {
@@ -103,14 +151,19 @@ header {
     letter-spacing: 5px;
 }
 
+h2 {
+    color: #f2f2f2;
+}
+
+h3 {
+    color: #7c2a2a;
+    font-size: 30px;
+}
+
 h4 {
     color: rgb(247, 244, 242);
     text-align: center;
     font-size: 30px;
-}
-
-h2 {
-    color: #f2f2f2;
 }
 
 .profile {
@@ -279,15 +332,124 @@ h2 {
 
 footer {
     margin-top: 20px;
-    background-color: rgb(0, 0, 0);
+    animation: footer 2s infinite;
     padding: 5px;
-    color: rgb(255, 255, 255);
+    color: #7c2a2a;
     border-radius: 10px;
     font-weight: 700;
     font-size: 12px;
 }
 
+
 @keyframes footer{
     2%, 100%{opacity: 1;}
     50%{opacity: 0;}
+}
+
+/* Container for the form */
+.contact-form {
+    background: rgb(247, 211, 121);
+    padding: 30px 35px;
+    width: 90%;
+    max-width: 450px;
+    margin: 40px auto;
+    border-radius: 13px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 1);
+    position: relative;
+    text-align: center;
+    box-sizing: border-box;
+
+}
+
+.contact-form h2 {
+    text-align: center;
+    margin-bottom: 7px;
+}
+
+.contact-form p {
+    text-align: center;
+    font-size: 15px;
+    color: rgba(92, 81, 42, 1);
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-size: 13px;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: bolder;
+    text-align: left;
+}
+
+::placeholder {
+    font-size: 12px;
+    font-style: italic;
+}
+
+input, select{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px;
+    border-radius: 8px;
+    border: 2px solid rgba(100, 150, 200, 0.91);
+}
+
+select {
+    background-color: ;
+}
+
+input:hover {
+    background-color: #ffa600;
+}
+
+input:focus {
+    background-color: rgb(0, 200, 197);
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: blueviolet;
+    background-color: rgb(238, 208, 144);
+}
+
+button {
+  background-color: #7c2a2a; /* Green background */
+  border: none;              /* Remove default border */
+  color: white;              /* White text color */
+  padding: 15px 32px;        /* Space between text and border */
+  text-align: center;        /* Center the text */
+  text-decoration: none;     /* Remove underline for <a> tags */
+  display: inline-block;     /* Allows setting padding and margin */
+  font-size: 16px;           /* Increase font size */
+  margin: 4px 2px;           /* Add margin around the button */
+  cursor: pointer;           /* Change mouse cursor to a hand on hover */
+  border-radius: 8px;        /* Rounded corners */
+  width: 100%;
+}
+
+button:hover {
+  background-color: #402060 ; /* Slightly darker green on hover */
+}
+
+button:active {
+  box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.6); /* Add an inset shadow to make it look "pressed" */
+  transform: translateY(2px); /* Move the button down slightly */
+}
+
+.textarea {
+    width: 100%;
+    height: 200px;
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 8px;
+    border: 2px solid rgba(100, 150, 200, 0.91);
+    resize: none; /* Prevent resizing */
 }

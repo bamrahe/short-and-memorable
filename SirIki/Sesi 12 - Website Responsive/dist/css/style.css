@@ -36,6 +36,17 @@ body {
 .navbar {
     padding: 20px 0;
     background-color: #d1cdcd;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    transition: transform 0.3s ease;
+}
+
+/* kondisi hide */
+.navbar.hide {
+    transform: translateY(-100%);
 }
 
 .navbar-box {
@@ -62,6 +73,11 @@ body {
 .navbar-box .menu {
     display: flex;
     gap: 50px;
+    pointer-events: none;
+}
+
+.navbar-box .menu.menu-active {
+    pointer-events: auto;
 }
 
 .navbar-box .menu li {
@@ -116,6 +132,7 @@ body {
 /* Hero */
 
 .hero {
+    margin-top: 80px;
     padding: 60px 0;
     background-color: burlywood;
 }
@@ -216,4 +233,551 @@ body {
     cursor: pointer;
     border-radius: 10px;
     font-weight: bold;
+}
+
+/* Cart Icon */
+.nav-icon {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    z-index: 2000;
+}
+
+.ri-menu-line {
+    position: relative;
+    z-index: 2001;
+}
+
+.ri-menu-line:hover {
+    cursor: pointer;
+}
+
+.cart2 {
+    position: relative;
+    cursor: pointer;
+}
+
+.cart2 i {
+    font-size: 20px;
+}
+
+.cart-count {
+    position: absolute;
+    display: flex;
+    top: -2px;
+    right: -12px;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+    padding: 1px;
+    font-size: 12px;
+    height: 12px;
+    width: 12px;
+    border-radius: 100%;
+    color: white;
+}
+
+/* Cart Panel */
+.cart {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    right: -100%;
+    width: 320px;
+    height: 100%;
+    background: #c0b5b5;
+    padding: 20px;
+    overflow-y: auto;
+    transition: 0.3s;
+}
+
+.cart.active {
+    right: 0;
+}
+
+@media (min-width: 992px) {
+    .cart {
+        width: 420px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .cart {
+        width: 480px;
+    }
+}
+
+.cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 12px;
+    border-bottom: 2px solid white;
+    margin-bottom: 20px;
+}
+
+.close-cart {
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-cart:hover {
+    color: azure;
+}
+
+.cart-item {
+    border-bottom: 1px solid white;
+    padding: 14px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.cart-item-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-item-top h4 {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.cart-item .price {
+    font-size: 13px;
+    color: black;
+}
+
+.item-total {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.cart-footer {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid white;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Quantity Button */
+.qty {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.qty button {
+    width: 30px;
+    height: 30px;
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.qty span {
+    min-width: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Remove Button */
+.remove {
+    font-size: 12px;
+    color: red;
+    cursor: pointer;
+}
+
+.remove:hover {
+    text-decoration: underline;
+}
+
+/* FOOTER STYLE */
+.footer {
+    margin-top: 100px;
+    background-color: #fff;
+}
+
+/* footer-top */
+.footer-top {
+    background: coral;
+    color: whitesmoke;
+    padding: 18px 0;
+}
+
+.footer-top-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 26px;
+    letter-spacing: 1px;
+}
+
+.payment-icons {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    font-weight: bold;
+}
+
+.payment-icons span {
+    font-size: 20px;
+}
+
+/* footer-bottom */
+.footer-bottom {
+    padding: 22px 0;
+    font-size: 20px;
+}
+
+.footer-bottom-box {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 20px;
+}
+
+/* left */
+.footer-left {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-left a {
+    text-decoration: none;
+    color: coral;
+}
+
+/* center */
+.footer-center {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-center a {
+    text-decoration: none;
+    color: coral;
+}
+
+/* right */
+.footer-right {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-right a {
+    text-decoration: none;
+    color: coral;
+    font-size: 30px;
+}
+
+/* responsive footer */
+@media (max-width:768px) {
+    .footer-bottom-box {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-left,
+    .footer-center,
+    .footer-right {
+        justify-content: center;
+    }
+}
+
+/* FOOTER STYLE */
+
+/* POP UP DETAILS PRODUCT */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    /* Gelapkan background agar fokus */
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.popup.active {
+    display: flex;
+}
+
+.popup-content {
+    background: #fff;
+    width: 95%;
+    max-width: 900px;
+    border-radius: 15px;
+    padding: 40px 20px 20px 20px;
+    /* Tambah padding atas untuk tombol close */
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Tombol Close di Pojok Kanan Atas */
+.close-popup {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #333;
+    transition: 0.3s;
+    z-index: 2100;
+}
+
+.close-popup:hover {
+    color: coral;
+    transform: scale(1.1);
+}
+
+.pop-body {
+    display: flex;
+    gap: 20px;
+    align-items: stretch;
+    /* Agar tinggi kiri dan kanan sama */
+}
+
+/* Area Gambar Utama */
+.popup-left {
+    flex: 3;
+    position: relative;
+    background: #fdfdfd;
+    border-radius: 10px;
+    height: 450px;
+    /* Sesuaikan tinggi */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.popup-left img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Navigasi Prev & Next (Sesuai Coretan Merah) */
+.nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.8);
+    color: #333;
+    border: 1px solid #ddd;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.nav:hover {
+    background: coral;
+    color: white;
+    border-color: coral;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Slider Thumbnail di Sebelah Kanan */
+.popup-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    height: 450px;
+    /* Samakan dengan popup-left */
+    padding-right: 10px;
+    overflow-y: auto;
+    /* Aktifkan Scroll Vertical */
+}
+
+/* Custom Scrollbar untuk Slider Kanan */
+.popup-right::-webkit-scrollbar {
+    width: 6px;
+}
+
+.popup-right::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.popup-right::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 10px;
+}
+
+.popup-right::-webkit-scrollbar-thumb:hover {
+    background: coral;
+}
+
+.popup-right img {
+    width: 100%;
+    min-height: 100px;
+    /* Pastikan gambar punya tinggi minimum agar bisa di-scroll */
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 3px solid transparent;
+    transition: 0.2s;
+    opacity: 0.7;
+}
+
+.popup-right img.active {
+    border-color: coral;
+    opacity: 1;
+    transform: scale(0.95);
+}
+
+#productTitle {
+    margin-top: 10px;
+    font-weight: 600;
+    color: #444;
+}
+
+/* Responsive Mobile */
+@media (max-width: 768px) {
+    .pop-body {
+        flex-direction: column;
+    }
+
+    .popup-left,
+    .popup-right {
+        height: 300px;
+    }
+
+    .popup-right {
+        flex-direction: row;
+        overflow-x: auto;
+        overflow-y: hidden;
+        width: 100%;
+    }
+
+    .popup-right img {
+        width: 80px;
+        min-height: 80px;
+    }
+}
+
+/* POP UP DETAILS PRODUCT */
+
+/* checkout button */
+.checkout-btn {
+    width: 100%;
+    background: rgb(209, 88, 44);
+    color: white;
+    padding: 12px;
+    font-size: 20px;
+    margin-top: 13px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.checkout-btn:hover {
+    opacity: 1.0;
+}
+
+.checkout-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.checkout-popup.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkout-box {
+    background: wheat;
+    padding: 20px;
+    width: 300px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.checkout-box input,
+.checkout-box select {
+    padding: 10px;
+    border: 1px solid orange;
+    border-radius: 7px;
+}
+
+.checkout-box button {
+    background-color: orangered;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.close-checkout {
+    align-self: flex-end;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.payment-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    border: 1px solid orange;
+    background: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.payment-option i {
+    font-size: 20px;
+}
+
+.payment-option:hover {
+    border: 3px solid orangered;
+    background: #f1f1f1;
+}
+
+.payment-option.active {
+    border: 2px solid orangered;
+    background: rgb(240, 215, 207);
 }
